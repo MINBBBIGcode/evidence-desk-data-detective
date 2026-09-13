@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive investigation into graphs, samples and correlation, using original fictional data.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <title>Evidence Desk | Read beyond the headline</title>
+  <link rel="stylesheet" href="./tokens.css">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to investigation</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#graph" data-view="graph">Evidence Desk</a>
+      <nav aria-label="Investigation activities">
+        <a href="#graph" data-view="graph" aria-current="step">Graph framing</a>
+        <a href="#sampling" data-view="sampling">Sampling</a>
+        <a href="#correlation" data-view="correlation">Correlation</a>
+        <a href="#verdict" data-view="verdict">Your verdict</a>
+      </nav>
+      <a class="button secondary notebook-link" href="#notebook">Evidence notebook</a>
+    </div>
+  </header>
+
+  <div class="page-wrap">
+    <div class="journey-bar">
+      <p id="progress">0 of 3 observations recorded</p>
+      <button class="quiet" id="restart" type="button">Start over</button>
+    </div>
+    <div class="workbench">
+      <main id="main" tabindex="-1">
+        <div class="introduction" id="introduction">
+          <p><strong>Start an investigation.</strong> Try three short cases, keep an evidence notebook, then examine a new headline. Allow about 10 to 15 minutes, or take one case at a time.</p>
+          <p class="small">Everything here is fictional. Your writing stays in this page's memory and disappears on reload.</p>
+          <button class="secondary" id="begin" type="button">Begin with the graph</button>
+        </div>
+
+        <section id="case-graph" class="case" aria-labelledby="title-graph">
+          <h1 id="title-graph" tabindex="-1">Same data. Different impression.</h1>
+          <p class="lead">A fictional library changed its opening hours. Compare average daily visits before and after.</p>
+          <p>Change the right-hand axis. Watch the picture, then check the numbers.</p>
+          <div class="chart-pair">
+            <figure class="chart-panel">
+              <figcaption>Zero-based view</figcaption>
+              <div id="chart-full" class="chart"></div>
+              <p class="small">Axis: 0 to 60 visits per day.</p>
+            </figure>
+            <figure class="chart-panel">
+              <figcaption>Your frame</figcaption>
+              <div id="chart-adjusted" class="chart"></div>
+              <div class="axis-controls">
+                <label>Axis minimum<input id="axis-min" type="number" min="0" max="45" step="1" value="40" aria-describedby="axis-help axis-error"></label>
+                <label>Axis maximum<input id="axis-max" type="number" min="55" max="100" step="1" value="60" aria-describedby="axis-help axis-error"></label>
+              </div>
+              <p id="axis-help" class="small">Minimum 0 to 45; maximum 55 to 100. Both means stay visible.</p>
+              <p id="axis-error" class="error" role="status"></p>
+            </figure>
+          </div>
+          <div class="action-row">
+            <button class="secondary" id="axis-demo" type="button">Show both at zero</button>
+            <button class="quiet" id="reset-graph" type="button">Reset this case</button>
+          </div>
+          <p class="result-strip" id="library-result"></p>
+          <p class="explanation">A tighter axis can make a change look larger. A nonzero axis can also reveal useful detail; it is not automatically deceptive. Read the values, axis labels and context together.</p>
+          <details class="data-details">
+            <summary>Data table for both views</summary>
+            <p class="small">Original synthetic data: ten fictional days before, ten after. Both charts plot the means from these same records.</p>
+            <div class="table-scroll" role="region" aria-label="Library daily values" tabindex="0">
+              <table><caption>Library visits per day</caption><thead><tr><th scope="col">Day in each period</th><th scope="col">Before</th><th scope="col">After</th></tr></thead><tbody id="library-table"></tbody></table>
+            </div>
+          </details>
+          <fieldset class="question">
+            <legend>Which conclusion survives a change of axis?</legend>
+            <label class="choice"><input type="radio" name="graph-answer" value="difference">The average increased by 8 visits per day.</label>
+            <label class="choice"><input type="radio" name="graph-answer" value="triple">The average tripled because the gap looks larger.</label>
+            <label class="choice"><input type="radio" name="graph-answer" value="data">The axis control changed the underlying counts.</label>
+          </fieldset>
+          <details class="hint"><summary>Need a clue?</summary><p>Subtract the before mean from the after mean. Does that subtraction use the axis settings?</p></details>
+          <button id="record-graph" type="button">Check and record observation</button>
+          <p id="feedback-graph" class="feedback" role="status"></p>
+          <a class="next-link" href="#sampling" data-view="sampling">Continue to sampling</a>
+        </section>
+
+        <section id="case-sampling" class="case" aria-labelledby="title-sampling" hidden>
+          <h1 id="title-sampling" tabindex="-1">Who made it into the sample?</h1>
+          <p class="lead">A fictional school wants to know whether to keep its library open later. Its complete teaching roster has 320 records across four clubs.</p>
+          <div class="population-panel">
+            <h2>The known population</h2>
+            <div id="population-dots" class="population-dots"></div>
+            <p class="small">Each dot represents four fictional records. Filled dots support later opening. These invented club differences are not claims about real students.</p>
+          </div>
+          <div class="sampling-controls">
+            <fieldset>
+              <legend>Who can be selected?</legend>
+              <label class="choice"><input type="radio" name="sample-method" value="whole" checked>Whole population</label>
+              <label class="choice"><input type="radio" name="sample-method" value="robotics">Robotics club only</label>
+            </fieldset>
+            <div>
+              <label>Sample size<input id="sample-size" type="number" min="8" max="80" step="1" value="20" aria-describedby="sample-help sample-error"></label>
+              <p id="sample-help" class="small">8 to 80 records, without replacement.</p>
+              <button id="draw-sample" type="button">Draw sample</button>
+            </div>
+          </div>
+          <p id="method-description" class="small"></p>
+          <p id="sample-error" class="error" role="status"></p>
+          <div class="action-row">
+            <button class="secondary" id="sample-demo" type="button">Try all 80 Robotics records</button>
+            <button class="quiet" id="reset-sampling" type="button">Reset this case</button>
+          </div>
+          <p id="sample-result" class="result-strip" role="status">Draw a sample to compare it with the population.</p>
+          <p class="small" id="draw-detail"></p>
+          <figure class="chart-panel composition-panel">
+            <figcaption>Who is represented?</figcaption>
+            <p class="legend"><span class="legend-item"><span class="legend-box population-mark" aria-hidden="true"></span>Population</span><span class="legend-item"><span class="legend-box sample-mark" aria-hidden="true"></span>Sample</span></p>
+            <div class="chart" id="chart-composition"></div>
+          </figure>
+          <details class="data-details">
+            <summary>Composition and support table</summary>
+            <div class="table-scroll" role="region" aria-label="Sample versus population" tabindex="0">
+              <table><caption>Club representation and support for later opening</caption><thead><tr><th scope="col">Club</th><th scope="col">Population</th><th scope="col">Supporters</th><th scope="col">Selected</th></tr></thead><tbody id="composition-table"></tbody></table>
+            </div>
+          </details>
+          <details class="data-details" id="selected-detail">
+            <summary>Selected synthetic records</summary>
+            <p id="selected-empty">No sample is selected yet.</p>
+            <div class="table-scroll" role="region" aria-label="Selected fictional records" tabindex="0">
+              <table id="selected-table" hidden><caption>Current sample, in selection order</caption><thead><tr><th scope="col">Synthetic ID</th><th scope="col">Club</th><th scope="col">Supports later opening?</th></tr></thead><tbody id="selected-body"></tbody></table>
+            </div>
+          </details>
+          <p class="explanation">A whole-roster draw can still differ by chance. A larger Robotics-only sample still leaves out three groups; size cannot repair who was excluded.</p>
+          <fieldset class="question">
+            <legend>Draw using both methods. What matters beyond sample size?</legend>
+            <label class="choice"><input type="radio" name="sample-answer" value="coverage">Whether the selection method gives the whole population a chance.</label>
+            <label class="choice"><input type="radio" name="sample-answer" value="large">An 80-record sample must represent everyone, regardless of how it was chosen.</label>
+            <label class="choice"><input type="radio" name="sample-answer" value="exact">A whole-population sample must match 50% exactly every time.</label>
+          </fieldset>
+          <details class="hint"><summary>Need a clue?</summary><p>Compare which clubs appear. A Robotics-only draw cannot include Art, Music or Garden, even when its size reaches 80.</p></details>
+          <button id="record-sampling" type="button">Check and record observation</button>
+          <p id="feedback-sampling" class="feedback" role="status"></p>
+          <a class="next-link" href="#correlation" data-view="correlation">Continue to correlation</a>
+        </section>
+
+        <section id="case-correlation" class="case" aria-labelledby="title-correlation" hidden>
+          <h1 id="title-correlation" tabindex="-1">A pattern is a clue, not a cause.</h1>
+          <p class="lead">At a fictional weekend kiosk, days with more cold-drink sales also tend to have more cycle hires. Explore one possible explanation.</p>
+          <fieldset class="inline-choices">
+            <legend>Compare the same sixteen days</legend>
+            <label class="choice"><input type="radio" name="weather-view" value="all" checked>All days</label>
+            <label class="choice"><input type="radio" name="weather-view" value="groups">Compare weather groups</label>
+          </fieldset>
+          <figure class="chart-panel scatter-panel">
+            <figcaption>Drink sales and cycle hires</figcaption>
+            <div id="chart-correlation" class="chart"></div>
+            <p id="weather-legend" class="legend"></p>
+          </figure>
+          <p id="correlation-reading" class="result-strip"></p>
+          <p class="explanation">Association alone does not establish causation. Warm weather is a plausible shared explanation for both counts. This small constructed example cannot prove that weather is the only cause.</p>
+          <details class="data-details">
+            <summary>Data table and optional correlation measure</summary>
+            <p id="correlation-statistics"></p>
+            <p class="small">Pearson's r describes linear association from -1 to 1. Zero r does not rule out every kind of relationship. The chart and the table use exactly the same sixteen synthetic records.</p>
+            <div class="table-scroll" role="region" aria-label="Kiosk synthetic daily data" tabindex="0">
+              <table><caption>Fictional kiosk observations</caption><thead><tr><th scope="col">Day</th><th scope="col">Weather</th><th scope="col">Drinks sold/day</th><th scope="col">Cycles hired/day</th></tr></thead><tbody id="kiosk-table"></tbody></table>
+            </div>
+          </details>
+          <div class="action-row"><button class="quiet" id="reset-correlation" type="button">Reset this case</button></div>
+          <fieldset class="question">
+            <legend>After comparing weather groups, which claim fits the evidence?</legend>
+            <label class="choice"><input type="radio" name="correlation-answer" value="cause">Selling more drinks caused more cycle hires.</label>
+            <label class="choice"><input type="radio" name="correlation-answer" value="alternative">The counts are associated; weather may help explain the pattern.</label>
+            <label class="choice"><input type="radio" name="correlation-answer" value="only">Weather is proven to be the only cause.</label>
+          </fieldset>
+          <details class="hint"><summary>Need a clue?</summary><p>Compare similar-weather days. Then ask whether this was an experiment that changed drink sales while keeping other factors comparable.</p></details>
+          <button id="record-correlation" type="button">Check and record observation</button>
+          <p id="feedback-correlation" class="feedback" role="status"></p>
+          <a class="next-link" href="#verdict" data-view="verdict">Examine a new headline</a>
+        </section>
+
+        <section id="case-verdict" class="case" aria-labelledby="title-verdict" hidden>
+          <h1 id="title-verdict" tabindex="-1">Write what the evidence supports.</h1>
+          <p class="lead">A fresh fictional case. Use your notebook to look beyond the headline.</p>
+          <article class="headline-panel" aria-labelledby="gallery-headline">
+            <p class="small"><strong>Fictional headline</strong></p>
+            <h2 id="gallery-headline">“New poster doubles visits at Harbor Gallery. 90% of the town approves.”</h2>
+            <div class="verdict-evidence">
+              <figure class="chart-panel">
+                <figcaption>A zoomed view of visits</figcaption>
+                <div id="chart-gallery" class="chart"></div>
+                <p class="small">Axis starts at 46 visits/day. All values are invented.</p>
+              </figure>
+              <div>
+                <p><strong>What was observed</strong></p>
+                <ul><li>Average daily visits: 48 before the poster launch and 56 after.</li><li>18 of 20 surveyed launch guests liked the poster.</li><li>The survey included launch guests, not a town-wide sample. Other changes were not controlled.</li></ul>
+              </div>
+            </div>
+            <details class="data-details"><summary>Headline evidence table</summary><table><caption>Harbor Gallery, fictional transfer case</caption><thead><tr><th scope="col">Measure</th><th scope="col">Value</th></tr></thead><tbody id="gallery-table"></tbody></table></details>
+          </article>
+          <form id="verdict-form" novalidate>
+            <label class="writing-label">Your claim<textarea id="claim" rows="3" maxlength="800" aria-describedby="writing-help"></textarea></label>
+            <label class="writing-label">Supporting observation<textarea id="observation" rows="3" maxlength="800" aria-describedby="writing-help"></textarea></label>
+            <label class="writing-label">One limitation<textarea id="limitation" rows="3" maxlength="800" aria-describedby="writing-help"></textarea></label>
+            <p class="small" id="writing-help">Up to 800 characters each. Do not include personal details. Your words stay in this page's memory; they are not sent, saved or automatically graded.</p>
+            <fieldset class="question">
+              <legend>Before you finish</legend>
+              <label class="choice"><input type="checkbox" name="self-check" value="numbers">I checked my claim against the actual numbers.</label>
+              <label class="choice"><input type="checkbox" name="self-check" value="evidence">I named a supporting observation, not just a visual impression.</label>
+              <label class="choice"><input type="checkbox" name="self-check" value="limit">I included a limitation about sampling or causation.</label>
+            </fieldset>
+            <details class="hint"><summary>See a sentence scaffold</summary><p>“The evidence suggests ... because we observed ... . However, we cannot conclude ... because ... .” Different careful interpretations can be reasonable.</p></details>
+            <button type="submit">Finish investigation</button>
+            <p id="feedback-verdict" class="feedback" role="status"></p>
+          </form>
+          <details class="exemplar"><summary>Compare with one possible answer</summary><p id="exemplar-text"></p><p>This is an example to discuss, not the only acceptable wording. Your own answer is not checked for correctness by this page.</p></details>
+          <section id="completion" class="completion" aria-labelledby="completion-title" hidden>
+            <h2 id="completion-title" tabindex="-1">Investigation complete</h2>
+            <p>You have recorded three observations and assembled a claim, evidence and limitation. Completion means you used the process, not that software verified your reasoning.</p>
+            <p><strong>Try next:</strong> choose a graph from a book or an adult-selected source. Ask what its axes show, who was counted, and what other explanation could fit.</p>
+            <button class="secondary" id="review-cases" type="button">Revisit your observations</button>
+          </section>
+        </section>
+      </main>
+
+      <aside id="notebook" class="notebook" aria-labelledby="notebook-title" tabindex="-1">
+        <h2 id="notebook-title">Evidence notebook</h2>
+        <p class="small">Recorded observations stay here while you move between cases.</p>
+        <section><h3>Graph framing</h3><p id="note-graph">Change an axis and check which numerical conclusion still holds.</p></section>
+        <section><h3>Sampling</h3><p id="note-sampling">Draw from both sampling frames, then inspect who was represented.</p></section>
+        <section><h3>Correlation</h3><p id="note-correlation">Compare weather groups and consider an alternative explanation.</p></section>
+        <p class="small">All examples are fictional. Refreshing or starting over clears your work.</p>
+      </aside>
+    </div>
+    <footer><span>Original synthetic data. No login or data collection.</span><a href="./EDUCATOR_GUIDE.md">Educator guide and sources</a></footer>
+  </div>
+
+  <dialog id="restart-dialog" aria-labelledby="restart-title" aria-describedby="restart-description">
+    <h2 id="restart-title">Start a fresh investigation?</h2>
+    <p id="restart-description">This clears the three observations and your written verdict. Nothing has been saved elsewhere.</p>
+    <div class="action-row"><button id="cancel-restart" class="secondary" type="button" autofocus>Keep my work</button><button id="confirm-restart" type="button">Clear and restart</button></div>
+  </dialog>
+  <noscript><p class="noscript">This local activity needs JavaScript for its charts and controls. It does not send your answers anywhere.</p></noscript>
+</body>
+</html>
