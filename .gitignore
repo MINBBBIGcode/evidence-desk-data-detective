@@ -1,0 +1,10 @@
+/.openai/
+/.sites-runtime/
+/.superloopy/
+/evidence/
+/node_modules/
+*.log
+/.playwright-cli/
+/output/
+/release/
+/TASK.md

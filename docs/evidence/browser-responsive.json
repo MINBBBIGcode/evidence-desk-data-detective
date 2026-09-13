@@ -1,0 +1,234 @@
+{
+  "browserVersion": "152.0.7977.83",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+  "verdict": "PASS",
+  "results": [
+    {
+      "view": "graph",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "outside": [],
+      "plotOverflow": [],
+      "minimumControlHeight": 48,
+      "reducedMotion": true,
+      "runningAnimations": 0
+    },
+    {
+      "view": "sampling",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "outside": [],
+      "plotOverflow": [],
+      "minimumControlHeight": 48,
+      "reducedMotion": true,
+      "runningAnimations": 0
+    },
+    {
+      "view": "correlation",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "outside": [],
+      "plotOverflow": [],
+      "minimumControlHeight": 48,
+      "reducedMotion": true,
+      "runningAnimations": 0
+    },
+    {
+      "view": "verdict",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "outside": [],
+      "plotOverflow": [],
+      "minimumControlHeight": 48,
+      "reducedMotion": true,
+      "runningAnimations": 0
+    },
+    {
+      "view": "graph",
+      "width": 768,
+      "scrollWidth": 768,
+      "outside": [],
+      "plotOverflow": [],
+      "minimumControlHeight": 48,
+      "reducedMotion": true,
+      "runningAnimations": 0
+    },
+    {
+      "view": "sampling",
+      "width": 768,
+      "scrollWidth": 768,
+      "outside": [],
+      "plotOverflow": [],
+      "minimumControlHeight": 48,
+      "reducedMotion": true,
+      "runningAnimations": 0
+    },
+    {
+      "view": "correlation",
+      "width": 768,
+      "scrollWidth": 768,
+      "outside": [],
+      "plotOverflow": [],
+      "minimumControlHeight": 48,
+      "reducedMotion": true,
+      "runningAnimations": 0
+    },
+    {
+      "view": "verdict",
+      "width": 768,
+      "scrollWidth": 768,
+      "outside": [],
+      "plotOverflow": [],
+      "minimumControlHeight": 48,
+      "reducedMotion": true,
+      "runningAnimations": 0
+    },
+    {
+      "view": "graph",
+      "width": 390,
+      "scrollWidth": 390,
+      "outside": [],
+      "plotOverflow": [],
+      "minimumControlHeight": 48,
+      "reducedMotion": true,
+      "runningAnimations": 0
+    },
+    {
+      "view": "sampling",
+      "width": 390,
+      "scrollWidth": 390,
+      "outside": [],
+      "plotOverflow": [],
+      "minimumControlHeight": 48,
+      "reducedMotion": true,
+      "runningAnimations": 0
+    },
+    {
+      "view": "correlation",
+      "width": 390,
+      "scrollWidth": 390,
+      "outside": [],
+      "plotOverflow": [],
+      "minimumControlHeight": 48,
+      "reducedMotion": true,
+      "runningAnimations": 0
+    },
+    {
+      "view": "verdict",
+      "width": 390,
+      "scrollWidth": 390,
+      "outside": [],
+      "plotOverflow": [],
+      "minimumControlHeight": 48,
+      "reducedMotion": true,
+      "runningAnimations": 0
+    },
+    {
+      "view": "graph",
+      "width": 360,
+      "scrollWidth": 360,
+      "outside": [],
+      "plotOverflow": [],
+      "minimumControlHeight": 48,
+      "reducedMotion": true,
+      "runningAnimations": 0
+    },
+    {
+      "view": "sampling",
+      "width": 360,
+      "scrollWidth": 360,
+      "outside": [],
+      "plotOverflow": [],
+      "minimumControlHeight": 48,
+      "reducedMotion": true,
+      "runningAnimations": 0
+    },
+    {
+      "view": "correlation",
+      "width": 360,
+      "scrollWidth": 360,
+      "outside": [],
+      "plotOverflow": [],
+      "minimumControlHeight": 48,
+      "reducedMotion": true,
+      "runningAnimations": 0
+    },
+    {
+      "view": "verdict",
+      "width": 360,
+      "scrollWidth": 360,
+      "outside": [],
+      "plotOverflow": [],
+      "minimumControlHeight": 48,
+      "reducedMotion": true,
+      "runningAnimations": 0
+    },
+    {
+      "view": "graph-text-200",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "bodyFont": "32px",
+      "outside": [],
+      "plotOverflow": []
+    },
+    {
+      "view": "sampling-text-200",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "bodyFont": "32px",
+      "outside": [],
+      "plotOverflow": []
+    },
+    {
+      "view": "correlation-text-200",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "bodyFont": "32px",
+      "outside": [],
+      "plotOverflow": []
+    },
+    {
+      "view": "verdict-text-200",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "bodyFont": "32px",
+      "outside": [],
+      "plotOverflow": []
+    },
+    {
+      "view": "graph-text-200",
+      "width": 360,
+      "scrollWidth": 360,
+      "bodyFont": "32px",
+      "outside": [],
+      "plotOverflow": []
+    },
+    {
+      "view": "sampling-text-200",
+      "width": 360,
+      "scrollWidth": 360,
+      "bodyFont": "32px",
+      "outside": [],
+      "plotOverflow": []
+    },
+    {
+      "view": "correlation-text-200",
+      "width": 360,
+      "scrollWidth": 360,
+      "bodyFont": "32px",
+      "outside": [],
+      "plotOverflow": []
+    },
+    {
+      "view": "verdict-text-200",
+      "width": 360,
+      "scrollWidth": 360,
+      "bodyFont": "32px",
+      "outside": [],
+      "plotOverflow": []
+    }
+  ],
+  "observed_at": "2026-09-11T23:04:55.038073+00:00",
+  "browser": "Google Chrome 152.0.7977.83, isolated Playwright CLI session",
+  "physical_device": false
+}

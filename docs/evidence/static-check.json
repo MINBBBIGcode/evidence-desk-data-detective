@@ -1,0 +1,73 @@
+{
+  "verdict": "PASS",
+  "files": 9,
+  "checks": "required files, token synchronization, resources, unique IDs, JS syntax, privacy constraints, contrast",
+  "contrast": [
+    {
+      "foreground": "--ink",
+      "background": "--surface",
+      "ratio": 16.17,
+      "minimum": 4.5
+    },
+    {
+      "foreground": "--ink",
+      "background": "--bg",
+      "ratio": 15.33,
+      "minimum": 4.5
+    },
+    {
+      "foreground": "--muted",
+      "background": "--bg",
+      "ratio": 7.09,
+      "minimum": 4.5
+    },
+    {
+      "foreground": "--muted",
+      "background": "--surface",
+      "ratio": 7.48,
+      "minimum": 4.5
+    },
+    {
+      "foreground": "--primary",
+      "background": "--surface",
+      "ratio": 7.02,
+      "minimum": 4.5
+    },
+    {
+      "foreground": "--primary",
+      "background": "--primary-soft",
+      "ratio": 6.14,
+      "minimum": 4.5
+    },
+    {
+      "foreground": "--on-primary",
+      "background": "--primary",
+      "ratio": 7.02,
+      "minimum": 4.5
+    },
+    {
+      "foreground": "--on-primary",
+      "background": "--primary-hover",
+      "ratio": 9.58,
+      "minimum": 4.5
+    },
+    {
+      "foreground": "--error",
+      "background": "--error-soft",
+      "ratio": 6.99,
+      "minimum": 4.5
+    },
+    {
+      "foreground": "--error",
+      "background": "--bg",
+      "ratio": 7.23,
+      "minimum": 4.5
+    },
+    {
+      "foreground": "--data-secondary",
+      "background": "--surface",
+      "ratio": 5.66,
+      "minimum": 4.5
+    }
+  ]
+}

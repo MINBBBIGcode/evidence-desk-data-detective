@@ -1,0 +1,152 @@
+{
+  "observed_at": "2026-09-11T23:07:03.508396+00:00",
+  "scope": "local served production dist only; public deployment untested",
+  "lighthouse": "13.4.1",
+  "runs": [
+    {
+      "preset": "mobile",
+      "run": 1,
+      "report": "lighthouse-mobile-final-wrap-1.json",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 91.0
+      },
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+      "weighted_failures": [
+        {
+          "id": "first-contentful-paint",
+          "score": 0.97,
+          "title": "First Contentful Paint"
+        },
+        {
+          "id": "robots-txt",
+          "score": 0,
+          "title": "robots.txt is not valid"
+        }
+      ]
+    },
+    {
+      "preset": "mobile",
+      "run": 2,
+      "report": "lighthouse-mobile-final-wrap-2.json",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 91.0
+      },
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+      "weighted_failures": [
+        {
+          "id": "first-contentful-paint",
+          "score": 0.97,
+          "title": "First Contentful Paint"
+        },
+        {
+          "id": "robots-txt",
+          "score": 0,
+          "title": "robots.txt is not valid"
+        }
+      ]
+    },
+    {
+      "preset": "mobile",
+      "run": 3,
+      "report": "lighthouse-mobile-final-wrap-3.json",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 91.0
+      },
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+      "weighted_failures": [
+        {
+          "id": "first-contentful-paint",
+          "score": 0.97,
+          "title": "First Contentful Paint"
+        },
+        {
+          "id": "robots-txt",
+          "score": 0,
+          "title": "robots.txt is not valid"
+        }
+      ]
+    },
+    {
+      "preset": "desktop",
+      "run": 1,
+      "report": "lighthouse-desktop-final-wrap-1.json",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 91.0
+      },
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+      "weighted_failures": [
+        {
+          "id": "robots-txt",
+          "score": 0,
+          "title": "robots.txt is not valid"
+        }
+      ]
+    },
+    {
+      "preset": "desktop",
+      "run": 2,
+      "report": "lighthouse-desktop-final-wrap-2.json",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 91.0
+      },
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+      "weighted_failures": [
+        {
+          "id": "robots-txt",
+          "score": 0,
+          "title": "robots.txt is not valid"
+        }
+      ]
+    },
+    {
+      "preset": "desktop",
+      "run": 3,
+      "report": "lighthouse-desktop-final-wrap-3.json",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 91.0
+      },
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+      "weighted_failures": [
+        {
+          "id": "robots-txt",
+          "score": 0,
+          "title": "robots.txt is not valid"
+        }
+      ]
+    }
+  ],
+  "medians": {
+    "mobile": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 91.0
+    },
+    "desktop": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 91.0
+    }
+  },
+  "verdict": "REVIEW",
+  "review_disposition": "Known robots.txt collection limitation: audit explicitly reports CSP violation; direct GET is HTTP 200 text/plain and valid robots contents. Strict connect-src none retained; SEO remains 91. Full raw reports retained locally, summary supplied here."
+}

@@ -1,0 +1,30 @@
+{
+  "browserVersion": "152.0.7977.83",
+  "userAgent": "Mozilla/5.0 (Linux; Android 16; Pixel 10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.8010.12 Mobile Safari/537.36",
+  "verdict": "PASS",
+  "checks": [
+    "Touch input is enabled in the mobile browser context",
+    "Tap updates graph controls",
+    "Tap records a checked observation",
+    "Tap runs the large biased-sample demonstration",
+    "Tap draws the requested whole-population sample",
+    "Tap changes scatter grouping",
+    "Mobile writing field accepts a local draft",
+    "Tap cancellation preserves the draft",
+    "Tap confirmation clears the draft",
+    "Mobile page has no horizontal overflow",
+    "The full tap journey makes no external requests",
+    "The mobile journey has no page runtime errors"
+  ],
+  "device": {
+    "maxTouchPoints": 1,
+    "width": 360,
+    "userAgent": "Mozilla/5.0 (Linux; Android 16; Pixel 10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.8010.12 Mobile Safari/537.36"
+  },
+  "externalRequestCount": 0,
+  "pageErrorCount": 0,
+  "physicalDeviceTest": false,
+  "observed_at": "2026-09-11T23:08:34.614444+00:00",
+  "browser": "Google Chrome 152.0.7977.83, isolated Playwright CLI session",
+  "physical_device": false
+}

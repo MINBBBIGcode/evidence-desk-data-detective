@@ -1,0 +1,106 @@
+TAP version 13
+# Subtest: library means and change reconcile to the raw counts
+ok 1 - library means and change reconcile to the raw counts
+  ---
+  duration_ms: 2.1561
+  type: 'test'
+  ...
+# Subtest: axis changes only the projection, never counts or statistics
+ok 2 - axis changes only the projection, never counts or statistics
+  ---
+  duration_ms: 0.4582
+  type: 'test'
+  ...
+# Subtest: invalid axes cannot quietly produce a chart
+ok 3 - invalid axes cannot quietly produce a chart
+  ---
+  duration_ms: 0.5969
+  type: 'test'
+  ...
+# Subtest: the constructed population has four equal groups and 50 percent support
+ok 4 - the constructed population has four equal groups and 50 percent support
+  ---
+  duration_ms: 1.1534
+  type: 'test'
+  ...
+# Subtest: a full Robotics-only sample stays biased even at the maximum size
+ok 5 - a full Robotics-only sample stays biased even at the maximum size
+  ---
+  duration_ms: 0.8562
+  type: 'test'
+  ...
+# Subtest: sampling is deterministic without replacement and does not mutate the roster
+ok 6 - sampling is deterministic without replacement and does not mutate the roster
+  ---
+  duration_ms: 2.1376
+  type: 'test'
+  ...
+# Subtest: whole-roster sampling includes every club across a documented fixed set of seeds
+ok 7 - whole-roster sampling includes every club across a documented fixed set of seeds
+  ---
+  duration_ms: 3.9875
+  type: 'test'
+  ...
+# Subtest: invalid sampling inputs fail before a sample can be produced
+ok 8 - invalid sampling inputs fail before a sample can be produced
+  ---
+  duration_ms: 0.3643
+  type: 'test'
+  ...
+# Subtest: kiosk data reconcile pooled and group correlations
+ok 9 - kiosk data reconcile pooled and group correlations
+  ---
+  duration_ms: 0.8107
+  type: 'test'
+  ...
+# Subtest: correlation handles perfect, reversed and constant examples honestly
+ok 10 - correlation handles perfect, reversed and constant examples honestly
+  ---
+  duration_ms: 0.488
+  type: 'test'
+  ...
+# Subtest: fresh headline uses its own values and the correct survey denominator
+ok 11 - fresh headline uses its own values and the correct survey denominator
+  ---
+  duration_ms: 0.2471
+  type: 'test'
+  ...
+# Subtest: empty, overlong and unfinished verdicts cannot become completion
+ok 12 - empty, overlong and unfinished verdicts cannot become completion
+  ---
+  duration_ms: 0.3188
+  type: 'test'
+  ...
+# Subtest: verdict completeness does not pretend to judge truth or understand prose
+ok 13 - verdict completeness does not pretend to judge truth or understand prose
+  ---
+  duration_ms: 0.1156
+  type: 'test'
+  ...
+# Subtest: basic numeric failures are explicit
+ok 14 - basic numeric failures are explicit
+  ---
+  duration_ms: 0.1918
+  type: 'test'
+  ...
+# Subtest: optional tools validate their contract and invoke shared actions without reading prose
+ok 15 - optional tools validate their contract and invoke shared actions without reading prose
+  ---
+  duration_ms: 3.7815
+  type: 'test'
+  ...
+# Subtest: registration failure is optional and does not break the lesson
+ok 16 - registration failure is optional and does not break the lesson
+  ---
+  duration_ms: 0.4703
+  type: 'test'
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 16
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 120.0842
