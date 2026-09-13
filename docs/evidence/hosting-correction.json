@@ -1,0 +1,101 @@
+{
+  "observed_at": "2026-09-13T23:34:17.850576+00:00",
+  "verdict": "PASS",
+  "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/",
+  "repository_url": "https://github.com/MINBBBIGcode/evidence-desk-data-detective",
+  "corrects_submission": "SUB-3XBT7EKH",
+  "application_files_unchanged": 10,
+  "files": [
+    {
+      "path": "dist/EDUCATOR_GUIDE.md",
+      "http_status": 200,
+      "bytes": 8109,
+      "sha256": "8f43d33876291659eec3128e35a9bb5a4dbeada3550a868a8bbfff6b0b826654",
+      "matches_original": true,
+      "set_cookie_header": false
+    },
+    {
+      "path": "dist/app.mjs",
+      "http_status": 200,
+      "bytes": 18294,
+      "sha256": "c280549c4fc6695c601b94818ffaf41027519447b43075f21b31256ecc3095d5",
+      "matches_original": true,
+      "set_cookie_header": false
+    },
+    {
+      "path": "dist/charts.mjs",
+      "http_status": 200,
+      "bytes": 6939,
+      "sha256": "b1c872978a3a2b40bb586d13a6ab85c3c4cf640c8c28db450c1625a79a760fc3",
+      "matches_original": true,
+      "set_cookie_header": false
+    },
+    {
+      "path": "dist/datasets.mjs",
+      "http_status": 200,
+      "bytes": 1857,
+      "sha256": "d940f2085c3d40024c376c227d8775a80db88083ca3a680623a5d14ce8f39e1a",
+      "matches_original": true,
+      "set_cookie_header": false
+    },
+    {
+      "path": "dist/domain.mjs",
+      "http_status": 200,
+      "bytes": 5271,
+      "sha256": "5b614a427282e4cc5bf76475e277cab5f8d439e77329f94721cbc54c25c5f160",
+      "matches_original": true,
+      "set_cookie_header": false
+    },
+    {
+      "path": "dist/index.html",
+      "http_status": 200,
+      "bytes": 19594,
+      "sha256": "f1ce442618bd87cb0a772e8606e7a1702bee0753e5895d24284218303f483446",
+      "matches_original": true,
+      "set_cookie_header": false
+    },
+    {
+      "path": "dist/robots.txt",
+      "http_status": 200,
+      "bytes": 23,
+      "sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95",
+      "matches_original": true,
+      "set_cookie_header": false
+    },
+    {
+      "path": "dist/styles.css",
+      "http_status": 200,
+      "bytes": 14360,
+      "sha256": "cd2d2a17122c40c3fca4b4d2decca1041f2e4b7684d75d3cd32cd7c28d018393",
+      "matches_original": true,
+      "set_cookie_header": false
+    },
+    {
+      "path": "dist/tokens.css",
+      "http_status": 200,
+      "bytes": 1677,
+      "sha256": "30e3aa8037d685a4382d78c0903328b25812090ae42069ade095568f7dcbe781",
+      "matches_original": true,
+      "set_cookie_header": false
+    },
+    {
+      "path": "dist/webmcp.mjs",
+      "http_status": 200,
+      "bytes": 3388,
+      "sha256": "d86aba87a335c308a4f6adb969b10798e408f8cefc23a66bb3f4173e1696d5ea",
+      "matches_original": true,
+      "set_cookie_header": false
+    }
+  ],
+  "browser_version": "152.0.7977.83",
+  "anonymous_access": true,
+  "journey_checks_passed": 41,
+  "cookies": 0,
+  "persistent_storage_entries": 0,
+  "only_same_origin_static_gets": true,
+  "application_errors": 0,
+  "fresh_domain_and_tool_tests_passed": 16,
+  "fresh_static_checks": "PASS",
+  "original_visual_evidence_scope": "Sep12 screenshots,24viewport/enlargement views and12touch checks remain applicable to byte-identical application files; not represented as new Sep14 captures.",
+  "provider_limitation": "No application or configured host analytics observed; ordinary provider server logs are outside this project control."
+}

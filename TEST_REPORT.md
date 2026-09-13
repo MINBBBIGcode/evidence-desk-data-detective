@@ -1,6 +1,6 @@
 # Evidence Desk verification
 
-Original verification, 12 September 2026 (Asia/Seoul): this report covers the supplied static source and synthetic test journeys. At original packaging, public deployment and submission had not yet happened. The source was subsequently delivered as SUB-3XBT7EKH. A September 14 hosting correction is being prepared; fresh public checks will be recorded separately before corrective submission. No testing with children was conducted.
+Original verification, 12 September 2026 (Asia/Seoul): this report covers the supplied static source and synthetic test journeys. At original packaging, public deployment and submission had not yet happened. The source was subsequently delivered as SUB-3XBT7EKH. The September14 hosting correction has passed the separate public checks recorded below. No testing with children was conducted.
 
 ## Environment and scope
 
@@ -60,3 +60,11 @@ The SEO deduction is a confirmed measurement limitation: Lighthouse's `Network.l
 ## Remaining validation boundaries
 
 Firefox, Safari, physical phones/tablets, screen readers and native WebMCP are unverified. No learning-efficacy or universal age-suitability claim is made. The typed verdict is never semantically graded. Data are intentionally small and synthetic; stratification does not establish a causal mechanism, and one random sample need not be closer to the known population than every restricted sample. Public hosting remains a separate verification step.
+
+## September14 hosting correction
+
+The corrected public preview is https://minbbbigcode.github.io/evidence-desk-data-detective/. All ten application files match the September12 submitted source byte for byte. The original visual, touch and responsive evidence above describes that unchanged application; it is not relabelled as a new measurement.
+
+Fresh verification: installed Google Chrome152.0.7977.83, a new anonymous browser context, 1280x960. All41 full-journey checks pass, including axis invariance, sampling, correlation reasoning, completion, keyboard controls and reset/reload. No browser-context cookies, local/session storage, JavaScript application errors, request bodies, query-string requests or cross-origin resource requests were observed. Ten direct public HTTP200 responses match the original file hashes and carry no Set-Cookie headers. The full record is [hosting browser journey](docs/evidence/hosting-browser-journey.json); the compact hash and host record is [hosting correction](docs/evidence/hosting-correction.json).
+
+Fresh Node verification passes all16 domain/tool tests and the static validator. No new human/child study, physical-device test, cross-browser test or Lighthouse score is claimed for this hosting correction. The September12 Lighthouse figures remain local diagnostic results. Provider infrastructure logs are outside application control.

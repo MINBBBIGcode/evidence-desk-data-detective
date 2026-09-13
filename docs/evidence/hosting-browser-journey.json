@@ -1,0 +1,192 @@
+{
+  "browserVersion": "152.0.7977.83",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+  "verdict": "PASS",
+  "checks": [
+    "Graph prerequisite gives actionable feedback",
+    "Blank axis clears old adjustable chart",
+    "Blank axis has an inline error",
+    "Fractional axis is rejected",
+    "Changing axis preserves displayed data and statistics",
+    "Equal axes yield equal point projections",
+    "Native axis control works by keyboard",
+    "Keyboard Tab reaches the next labelled control",
+    "Keyboard focus has a visible outline",
+    "Wrong graph answer offers specific retry feedback",
+    "Graph observation records once",
+    "Repeated record does not duplicate progress",
+    "Large biased sample reconciles to 60/80 and75%",
+    "Selected-record table contains all80 records",
+    "Blank sample size clears old chart",
+    "Blank sample size clears old record table",
+    "Fractional sample size is rejected",
+    "Samples have the requested number of unique records",
+    "Repeated draws advance the reproducible sequence",
+    "Sampling feedback distinguishes chance from coverage",
+    "Both-method exploration and sampling reasoning record",
+    "Group view encodes all16 actual points with two shapes",
+    "Correlation statistics match the synthetic groups",
+    "Every scatter point has an accessible table row",
+    "Causal overclaim gets specific feedback",
+    "All three observations are recorded",
+    "Incomplete verdict names missing fields",
+    "Incomplete verdict cannot show completion",
+    "Completed journey reaches a useful summary",
+    "Completion explicitly avoids judging arbitrary prose",
+    "Editing a completed answer clears completion",
+    "Case reset removes only its notebook entry",
+    "Case reset preserves other observations",
+    "Case reset preserves the written verdict",
+    "Global reset uses an accessible confirmation",
+    "Cancelling reset preserves work",
+    "Escape dismisses reset without clearing work",
+    "Confirmed reset clears all observations",
+    "Confirmed reset clears writing and restores inputs",
+    "Reload starts a clean page-local session",
+    "No persistent browser data or cookies are created"
+  ],
+  "viewport": {
+    "width": 1280,
+    "height": 960
+  },
+  "screenshots": [
+    "graph-invalid.png",
+    "graph-1280.png",
+    "sampling-1280.png",
+    "correlation-1280.png",
+    "verdict-1280.png"
+  ],
+  "nativeWebMCP": false,
+  "cookies": [],
+  "storage": {
+    "local": 0,
+    "session": 0
+  },
+  "requests": [
+    {
+      "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/",
+      "method": "GET",
+      "hasBody": false
+    },
+    {
+      "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/tokens.css",
+      "method": "GET",
+      "hasBody": false
+    },
+    {
+      "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/styles.css",
+      "method": "GET",
+      "hasBody": false
+    },
+    {
+      "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/app.mjs",
+      "method": "GET",
+      "hasBody": false
+    },
+    {
+      "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/datasets.mjs",
+      "method": "GET",
+      "hasBody": false
+    },
+    {
+      "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/domain.mjs",
+      "method": "GET",
+      "hasBody": false
+    },
+    {
+      "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/charts.mjs",
+      "method": "GET",
+      "hasBody": false
+    },
+    {
+      "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/webmcp.mjs",
+      "method": "GET",
+      "hasBody": false
+    },
+    {
+      "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/",
+      "method": "GET",
+      "hasBody": false
+    },
+    {
+      "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/tokens.css",
+      "method": "GET",
+      "hasBody": false
+    },
+    {
+      "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/styles.css",
+      "method": "GET",
+      "hasBody": false
+    },
+    {
+      "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/app.mjs",
+      "method": "GET",
+      "hasBody": false
+    },
+    {
+      "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/datasets.mjs",
+      "method": "GET",
+      "hasBody": false
+    },
+    {
+      "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/domain.mjs",
+      "method": "GET",
+      "hasBody": false
+    },
+    {
+      "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/charts.mjs",
+      "method": "GET",
+      "hasBody": false
+    },
+    {
+      "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/webmcp.mjs",
+      "method": "GET",
+      "hasBody": false
+    },
+    {
+      "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/",
+      "method": "GET",
+      "hasBody": false
+    },
+    {
+      "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/tokens.css",
+      "method": "GET",
+      "hasBody": false
+    },
+    {
+      "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/styles.css",
+      "method": "GET",
+      "hasBody": false
+    },
+    {
+      "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/app.mjs",
+      "method": "GET",
+      "hasBody": false
+    },
+    {
+      "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/datasets.mjs",
+      "method": "GET",
+      "hasBody": false
+    },
+    {
+      "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/domain.mjs",
+      "method": "GET",
+      "hasBody": false
+    },
+    {
+      "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/charts.mjs",
+      "method": "GET",
+      "hasBody": false
+    },
+    {
+      "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/webmcp.mjs",
+      "method": "GET",
+      "hasBody": false
+    }
+  ],
+  "pageErrors": [],
+  "url": "https://minbbbigcode.github.io/evidence-desk-data-detective/",
+  "anonymousContext": true,
+  "observed_at": "2026-09-13T23:34:17.276575+00:00",
+  "scope": "Fresh anonymous Chrome full original41-check journey against corrected GitHub Pages host; no child or physical-device testing."
+}
